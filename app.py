@@ -131,7 +131,7 @@ st.bar_chart(sex_summary)
 #-----------------------------------
 # Chart 2: Heart Disease Rate by age
 #-----------------------------------
-st.subheader("1: Heart Disease Rate by sex")
+st.subheader("2: Heart Disease Rate by sex")
 age_summary =(
     filtered_df.groupby("age", observed=True)["target"]
     .mean()
@@ -146,7 +146,7 @@ st.line_chart(age_summary)
 #-----------------------------------
 # Chart 3: Disease Vs No Disease
 #-----------------------------------
-st.subheader("1: Heart Disease Distribution")
+st.subheader("3: Heart Disease Distribution")
 target_counts =(
     filtered_df["target_label"]
     .value_counts()
