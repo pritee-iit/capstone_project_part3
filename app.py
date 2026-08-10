@@ -35,8 +35,9 @@ def load_data():
     # age group
     df["age_group"] = pd.cut(
         df["age"],
-        bins=[0,39,49,59,69,float("inf")],
-        labels=["<40","40-49","50-59","60-69","70+"]
+        bins=[0,49,59,64,float("inf")],
+        labels=["<50","50-59","60-64","65+"],
+        include_lowest=True
     )
 
     return df
@@ -62,7 +63,7 @@ st.write(
 
 # Sidebar filter
 st.sidebar.header("Dashboard Filter")
-age_options = ["All","Under 40","40-49","50-59","60+"]
+age_options = ["All","Under 50","50-59","60-65","65+"]
 selected_age = st.sidebar.selectbox("Select age group",age_options)
 
 if selected_age == "All":
