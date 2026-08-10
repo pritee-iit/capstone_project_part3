@@ -50,3 +50,6 @@ An interactive Dashoboard build using Streamlit
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+```
+## 6. Streamlit dashboard link
+https://capstoneprojectpart3-xcmuwzdc6d3vslydqclqnh.streamlit.app/
