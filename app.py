@@ -63,7 +63,7 @@ st.write(
 
 # Sidebar filter
 st.sidebar.header("Dashboard Filter")
-age_options = ["All","Under 50","50-59","60-65","65+"]
+age_options = ["All","<50","50-59","60-64","65+"]
 selected_age = st.sidebar.selectbox("Select age group",age_options)
 
 if selected_age == "All":
